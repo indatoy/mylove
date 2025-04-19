@@ -14,152 +14,41 @@
       --light-pink: #FFF0F3;
       --text-dark: #333333;
     }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff;
-      color: var(--text-dark);
-      overflow-x: hidden;
-    }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fff; color: var(--text-dark); overflow-x: hidden; }
     header {
-      background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5199556248729677035_y.jpg') no-repeat center/cover;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-      border-radius: 0 0 20px 20px;
+      background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),
+        url('https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5199556248729677035.jpg') no-repeat center/cover;
+      height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; color: white; padding: 20px; border-radius: 0 0 20px 20px;
     }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    header p {
-      font-size: 1.5em;
-      margin-top: 10px;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.2);
-      line-height: 1.4;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-    }
-    /* Счётчик дней */
-    .count-section {
-      background: var(--light-beige);
-      border-radius: 20px;
-      padding: 40px 20px;
-      margin-bottom: 80px;
-      text-align: center;
-    }
-    .count-number {
-      font-size: 3.5em;
-      color: var(--accent-blue);
-      margin: 0;
-      line-height: 1;
-    }
-    .count-label {
-      font-size: 1.2em;
-      color: var(--text-dark);
-      margin-top: 10px;
-    }
-    /* "Почему я люблю Седу" */
-    .reasons-section {
-      background: var(--light-blue);
-      border-radius: 20px;
-      padding: 40px 20px;
-      margin-bottom: 80px;
-    }
-    .reasons-section h2 {
-      text-align: center;
-      color: var(--accent-blue);
-      margin-bottom: 20px;
-    }
-    .reasons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-    .reasons p {
-      background: var(--light-beige);
-      padding: 20px;
-      border-left: 6px solid var(--accent-pink);
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-      font-size: 1.1em;
-      line-height: 1.5;
-    }
-    /* Галерея */
-    .gallery-section {
-      background: var(--light-pink);
-      border-radius: 20px;
-      padding: 20px 20px 40px 20px;
-      margin-bottom: 80px;
-    }
-    .gallery-section h2 {
-      text-align: center;
-      color: var(--accent-blue);
-      margin-bottom: 20px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      object-fit: cover;
-      height: 300px;
-      border: 3px solid var(--accent-blue);
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-color: var(--accent-pink);
-    }
-    /* Футер */
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: var(--accent-beige);
-      font-style: italic;
-      font-size: 1.1em;
-      color: rgba(51,51,51,0.6);
-      border-radius: 20px 20px 0 0;
-      line-height: 1.2;
-      white-space: pre-wrap;
-    }
-    /* Адаптивность */
+    header h1 { font-size: 3em; margin: 0; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+    header p { font-size: 1.5em; margin-top: 10px; text-shadow: 0 1px 4px rgba(0,0,0,0.2); line-height: 1.4; }
+    section { max-width: 900px; margin: 40px auto; }
+    .count-section { background: var(--light-beige); border-radius: 20px; padding: 40px 20px; margin-bottom: 80px; text-align: center; }
+    .count-number { font-size: 3.5em; color: var(--accent-blue); margin: 0; line-height: 1; }
+    .count-label { font-size: 1.2em; color: var(--text-dark); margin-top: 10px; }
+    .reasons-section { background: var(--light-blue); border-radius: 20px; padding: 40px 20px; margin-bottom: 80px; }
+    .reasons-section h2 { text-align: center; color: var(--accent-blue); margin-bottom: 20px; }
+    .reasons { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .reasons p { background: var(--light-beige); padding: 20px; border-left: 6px solid var(--accent-pink);
+      border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); font-size: 1.1em; line-height: 1.5; }
+    .gallery-section { background: var(--light-pink); border-radius: 20px; padding: 20px 20px 40px 20px; margin-bottom: 80px; }
+    .gallery-section h2 { text-align: center; color: var(--accent-blue); margin-bottom: 20px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .gallery img { width: 100%; border-radius: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;
+      object-fit: cover; height: 300px; border: 3px solid var(--accent-blue); }
+    .gallery img:hover { transform: scale(1.05); box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-color: var(--accent-pink); }
+    footer { text-align: center; padding: 40px 20px; background: var(--accent-beige);
+      font-style: italic; font-size: 1.1em; color: rgba(51,51,51,0.6); border-radius: 20px 20px 0 0;
+      line-height: 1.2; white-space: pre-wrap; }
     @media (max-width: 768px) {
-      header {
-        height: auto;
-        padding: 60px 20px;
-      }
-      header h1 {
-        font-size: 2.5em;
-      }
-      header p {
-        font-size: 1.2em;
-      }
-      .count-number {
-        font-size: 2.5em;
-      }
-      .reasons {
-        grid-template-columns: 1fr;
-      }
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-      .gallery img {
-        height: auto;
-        max-height: 200px;
-      }
+      header { height: auto; padding: 60px 20px; }
+      header h1 { font-size: 2.5em; }
+      header p { font-size: 1.2em; }
+      .count-number { font-size: 2.5em; }
+      .reasons { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery img { height: auto; max-height: 200px; }
     }
   </style>
 </head>
@@ -168,12 +57,10 @@
     <h1>Это Седа</h1>
     <p>самая красивая девушка, которую я когда-либо видел<br>Сайт, сделанный с любовью.</p>
   </header>
-
   <section class="count-section">
     <p class="count-number" id="days-count">0</p>
     <p class="count-label"><span id="days-label">дней</span> с нашего знакомства</p>
   </section>
-
   <section class="reasons-section">
     <h2>Почему я люблю Седу</h2>
     <div class="reasons">
@@ -187,24 +74,22 @@
       <p>Что бы не говорила Петимат, Седа ответственная, особенно когда это касается чужого права</p>
     </div>
   </section>
-
   <section class="gallery-section">
     <h2>Фотографии</h2>
     <div class="gallery">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977981_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977982_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977983_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977984_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977985_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977986_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977987_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977988_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977989_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977990_y.jpg" alt="Седа">
-      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5210942915700977991_y.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977981.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977982.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977983.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977984.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977985.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977986.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977987.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977988.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977989.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977990.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977991.jpg" alt="Седа">
     </div>
   </section>
-
   <footer>
 Будь у меня в руках небесный шёлк,
 Расшитый светом солнца и луны...
@@ -215,9 +100,8 @@
 И я простираю грёзы под ноги тебе!
 Ступай легко, мои ты топчешь грёзы...
   </footer>
-
   <script>
-    const startDate = new Date("2018-09-01"); // поменяй на точную дату знакомства
+    const startDate = new Date("2018-09-01");
     const diff = Math.floor((new Date() - startDate) / (1000 * 60 * 60 * 24));
     const label = document.getElementById("days-label");
     const lastDigit = diff % 10;
