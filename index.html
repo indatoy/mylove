@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Седа</title>
   <style>
     :root {
@@ -16,8 +16,7 @@
     }
     body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fff; color: var(--text-dark); overflow-x: hidden; }
     header {
-      background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),
-        url('https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5199556248729677035.jpg') no-repeat center/cover;
+      background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/indatoy/mylove/main/imgs/photo_5199556248729677035_y.jpg') no-repeat center/cover;
       height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
       text-align: center; color: white; padding: 20px; border-radius: 0 0 20px 20px;
     }
@@ -30,25 +29,29 @@
     .reasons-section { background: var(--light-blue); border-radius: 20px; padding: 40px 20px; margin-bottom: 80px; }
     .reasons-section h2 { text-align: center; color: var(--accent-blue); margin-bottom: 20px; }
     .reasons { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-    .reasons p { background: var(--light-beige); padding: 20px; border-left: 6px solid var(--accent-pink);
-      border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); font-size: 1.1em; line-height: 1.5; }
+    .reasons p { background: var(--light-beige); padding: 20px; border-left: 6px solid var(--accent-pink); border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); font-size: 1.1em; line-height: 1.5; }
     .gallery-section { background: var(--light-pink); border-radius: 20px; padding: 20px 20px 40px 20px; margin-bottom: 80px; }
     .gallery-section h2 { text-align: center; color: var(--accent-blue); margin-bottom: 20px; }
     .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .gallery img { width: 100%; border-radius: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;
-      object-fit: cover; height: 300px; border: 3px solid var(--accent-blue); }
+    .gallery img { width: 100%; border-radius: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; object-fit: cover; height: 300px; border: 3px solid var(--accent-blue); }
     .gallery img:hover { transform: scale(1.05); box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-color: var(--accent-pink); }
-    footer { text-align: center; padding: 40px 20px; background: var(--accent-beige);
-      font-style: italic; font-size: 1.1em; color: rgba(51,51,51,0.6); border-radius: 20px 20px 0 0;
-      line-height: 1.2; white-space: pre-wrap; }
+    .location-section { background: var(--light-beige); border-radius: 20px; padding: 40px 20px; margin-bottom: 80px; }
+    .location-section h2 { text-align: center; color: var(--accent-blue); margin-bottom: 20px; }
+    .locations { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .location-card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+    .location-card h3 { margin-top: 0; color: var(--accent-pink); }
+    .location-card p { margin: 10px 0; }
+    .location-card a { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
+    footer { text-align: center; padding: 40px 20px; background: var(--accent-beige); font-style: italic; font-size: 1.1em; color: rgba(51,51,51,0.6); border-radius: 20px 20px 0 0; line-height: 1.2; white-space: pre-wrap; }
     @media (max-width: 768px) {
       header { height: auto; padding: 60px 20px; }
       header h1 { font-size: 2.5em; }
       header p { font-size: 1.2em; }
       .count-number { font-size: 2.5em; }
       .reasons { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: 1fr; }
-      .gallery img { height: auto; max-height: 200px; }
+      .gallery { display: flex; overflow-x: auto; gap: 15px; padding-bottom: 10px; scroll-snap-type: x mandatory; }
+      .gallery img { flex: 0 0 80%; height: auto; max-height: 60vh; object-fit: contain; scroll-snap-align: start; }
+      .locations { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -77,6 +80,8 @@
   <section class="gallery-section">
     <h2>Фотографии</h2>
     <div class="gallery">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5208856411998645383.jpg" alt="Седа">
+      <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977980.jpg" alt="Седа">
       <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977981.jpg" alt="Седа">
       <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977982.jpg" alt="Седа">
       <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977983.jpg" alt="Седа">
@@ -90,15 +95,30 @@
       <img src="https://raw.githubusercontent.com/indatoy/mylove/main/imgs/5210942915700977991.jpg" alt="Седа">
     </div>
   </section>
+  <section class="location-section">
+    <h2>На случай если вы её потеряли</h2>
+    <div class="locations">
+      <div class="location-card">
+        <h3>Её дом</h3>
+        <p>ул. Орджоникидзе, 84 корп. 6, г. Ессентуки</p>
+        <a href="https://yandex.ru/maps?whatshere%5Bpoint%5D=42.87872650140097%2C44.053907420077124&whatshere%5Bzoom%5D=15.708375" target="_blank">Посмотреть на карте</a>
+      </div>
+      <div class="location-card">
+        <h3>Её работа</h3>
+        <p>Дворец Нарзанов, г. Ессентуки</p>
+        <a href="https://yandex.ru/maps/org/dvorets_narzanov/173395664081?si=n4a35e77ak58ac9wprq7v00ctg" target="_blank">Посмотреть на карте</a>
+      </div>
+    </div>
+  </section>
   <footer>
 Будь у меня в руках небесный шёлк,
-Расшитый светом солнца и луны...
+Расшитый светом солнца и луны.
 Прозрачный, тусклый или тёмный шёлк,
 Беззвёздной ночи, солнца и луны.
 Я шёлк бы расстилал у ног твоих.
-Но я - бедняк, и у меня лишь грёзы...
+Но я - бедняк, и у меня лишь грёзы.
 И я простираю грёзы под ноги тебе!
-Ступай легко, мои ты топчешь грёзы...
+Ступай легко, мои ты топчешь грёзы.
   </footer>
   <script>
     const startDate = new Date("2018-09-01");
@@ -107,13 +127,9 @@
     const lastDigit = diff % 10;
     const lastTwo = diff % 100;
     let form;
-    if (lastDigit === 1 && lastTwo !== 11) {
-      form = 'день';
-    } else if (lastDigit >= 2 && lastDigit <= 4 && !(lastTwo >= 12 && lastTwo <= 14)) {
-      form = 'дня';
-    } else {
-      form = 'дней';
-    }
+    if (lastDigit === 1 && lastTwo !== 11) { form = 'день'; }
+    else if (lastDigit >= 2 && lastDigit <= 4 && !(lastTwo >= 12 && lastTwo <= 14)) { form = 'дня'; }
+    else { form = 'дней'; }
     document.getElementById("days-count").textContent = diff;
     label.textContent = form;
   </script>
